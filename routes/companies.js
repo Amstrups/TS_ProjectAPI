@@ -22,7 +22,7 @@ router.get("/GetCompanyById", async (req, res) => {
   }
 });
 
-router.get("/GetOwnerByCompanyId", async (req, res) => {
+router.get("/GetOwnersByCompanyId", async (req, res) => {
   try {
     const company = await Company.findById(req.body.companyId);
     res.status(200).json(company.owners);

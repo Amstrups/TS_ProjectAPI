@@ -49,3 +49,64 @@ docker-compose down
 ```
 
 ## API-Documentation
+
+**All queries make use of the body, in form of JSON**
+
+#### Getters
+
+**Returns all companies**
+
+```bash
+GET /GetCompanies
+```
+
+**Returns company with the given ID. Null if none found.**
+
+```bash
+GET /GetOwnerByCompanyId
+```
+
+Body: {companyId: ID}
+
+**Returns owners of company with the given ID. Null if none found.**
+
+```bash
+GET /GetOwnersByCompanyId
+```
+
+Body: {companyId: ID}
+
+#### Posts
+
+```bash
+POST /CreateCompany
+```
+
+Body: {name: CompanyName,
+country: CompanyCountry,
+owners: [{
+name: OwnerName,
+socialNumber: OwnerSocialSecurityNumber
+}]
+
+}
+
+#### Putters
+
+```bash
+PUT /UpdateCompanyById
+```
+
+```bash
+PUT /AddOwner
+```
+
+#### Delets
+
+```bash
+PUT /RemoveCompany
+```
+
+```bash
+PUT /RemoveOwner
+```
