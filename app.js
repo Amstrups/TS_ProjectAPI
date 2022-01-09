@@ -3,17 +3,14 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 require("dotenv/config");
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 
 app.use(bodyParser.json());
 
 //Routes
 const companyRoutes = require("./routes/companies");
 
-//app.use("/", companyRoutes);
-app.get("/", (req, res) => {
-  res.send("Nah!!");
-});
+app.use("/", companyRoutes);
 
 //MongoDB
 mongoose

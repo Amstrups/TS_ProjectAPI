@@ -6,10 +6,44 @@ Due to this project only being used as a sample of abilities, I have included a 
 
 ## Requirements
 
-You will need to have installed the official 'Node'-image locally to your desktop for this application to build/run.
+You will need to have installed the official 'node'-image, locally on your desktop for this application to build/run.
 
 You can see the documentation here [https://hub.docker.com/_/node], or simply use the following command:
 
 ```bash
 docker pull node
+```
+
+## Build
+
+**The following docker-commands are all required to be run in the root directory of the application**
+
+Before the application can run, you will have to build the image by running the following command, replacing "your-preferred-image-name":
+
+```bash
+docker build -t your-preferred-image-name .
+```
+
+or, if no personalized image-name wanted, run:
+
+```bash
+docker-compose build
+```
+
+This command will hijack the name of the directory, and use this in the naming process.
+
+## Run
+
+After building the image, simply run the command:
+
+```bash
+docker-compose up -d
+```
+
+\*The -d flag is used for detatching the container from your current terminal.
+
+To shutdown the application, run the following command:
+
+```bash
+docker-compose down
 ```
