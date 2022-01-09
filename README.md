@@ -84,12 +84,14 @@ Body: {companyId: ID}
 POST /CreateCompany
 ```
 
-Body: {name: CompanyName,\
-country: CompanyCountry,\
-owners: [{\
-name: OwnerName,\
-socialNumber: OwnerSocialSecurityNumber\
+```javascript
+Body: {name: CompanyName,
+country: CompanyCountry,
+owners: [{
+name: OwnerName,
+socialNumber: OwnerSocialSecurityNumber
 }]}
+```
 
 ## Putters
 
