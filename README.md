@@ -66,7 +66,11 @@ GET /GetCompanies
 GET /GetOwnerByCompanyId
 ```
 
-Body: {companyId: ID}
+```javascript
+Body: {
+  companyId: CompanyID;
+}
+```
 
 **Returns owners of company with the given ID. Null if none found.**
 
@@ -74,7 +78,11 @@ Body: {companyId: ID}
 GET /GetOwnersByCompanyId
 ```
 
-Body: {companyId: ID}
+```javascript
+Body: {
+  companyId: CompanyID;
+}
+```
 
 ## Posts
 
@@ -103,8 +111,13 @@ Body: {
 PUT /UpdateCompanyById
 ```
 
-Body: {companyId: CompanyID, name: CompanyName,
-country: CompanyCountry}
+```javascript
+Body: {
+    companyId: CompanyID,
+    name: CompanyName,
+    country: CompanyCountry
+}
+```
 
 **Add owner to the company of the given ID.**
 
@@ -112,10 +125,13 @@ country: CompanyCountry}
 PUT /AddOwner
 ```
 
-Body: {companyId: CompanyID,
-name: OwnerName,
-socialNumber: OwnerSocialSecurityNumber
+```javascript
+Body: {
+    companyId: CompanyID,
+    name: OwnerName,
+    socialNumber: OwnerSocialSecurityNumber
 }
+```
 
 ## Deletes
 
@@ -125,7 +141,11 @@ socialNumber: OwnerSocialSecurityNumber
 PUT /RemoveCompany
 ```
 
-Body: {companyId: CompanyID}
+```javascript
+Body: {
+  companyId: CompanyID;
+}
+```
 
 **Removes the owners of the given ID, from the specified company.**
 
@@ -133,4 +153,9 @@ Body: {companyId: CompanyID}
 PUT /RemoveOwner
 ```
 
-Body: {companyId: CompanyID, ownerId: OwnerID}
+```javascript
+Body: {
+    companyId: CompanyID,
+    ownerId: OwnerID
+}
+```
