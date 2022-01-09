@@ -54,7 +54,7 @@ docker-compose down
 
 ## Getters
 
-**Returns all companies**
+**Returns all companies.**
 
 ```bash
 GET /GetCompanies
@@ -78,6 +78,8 @@ Body: {companyId: ID}
 
 ## Posts
 
+**Create company from the given body. ID's are generated in DB**
+
 ```bash
 POST /CreateCompany
 ```
@@ -87,26 +89,44 @@ country: CompanyCountry,
 owners: [{
 name: OwnerName,
 socialNumber: OwnerSocialSecurityNumber
-}]
-
-}
+}]}
 
 ## Putters
+
+**Updates company of given ID with the given name and country.**
 
 ```bash
 PUT /UpdateCompanyById
 ```
 
+Body: {companyId: CompanyID, name: CompanyName,
+country: CompanyCountry}
+
+**Add owner to the company of the given ID.**
+
 ```bash
 PUT /AddOwner
 ```
 
-## Delets
+Body: {companyId: CompanyID,
+name: OwnerName,
+socialNumber: OwnerSocialSecurityNumber
+}
+
+## Deletes
+
+**Removes the company of the given ID.**
 
 ```bash
 PUT /RemoveCompany
 ```
 
+Body: {companyId: CompanyID}
+
+**Removes the owners of the given ID, from the specified company.**
+
 ```bash
 PUT /RemoveOwner
 ```
+
+Body: {companyId: CompanyID, ownerId: OwnerID}
