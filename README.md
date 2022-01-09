@@ -48,11 +48,11 @@ To shutdown the application, run the following command:
 docker-compose down
 ```
 
-## API-Documentation
+# API-Documentation
 
 **All queries make use of the body, in form of JSON**
 
-#### Getters
+## Getters
 
 **Returns all companies**
 
@@ -76,7 +76,7 @@ GET /GetOwnersByCompanyId
 
 Body: {companyId: ID}
 
-#### Posts
+## Posts
 
 ```bash
 POST /CreateCompany
@@ -91,7 +91,7 @@ socialNumber: OwnerSocialSecurityNumber
 
 }
 
-#### Putters
+## Putters
 
 ```bash
 PUT /UpdateCompanyById
@@ -101,7 +101,7 @@ PUT /UpdateCompanyById
 PUT /AddOwner
 ```
 
-#### Delets
+## Delets
 
 ```bash
 PUT /RemoveCompany
