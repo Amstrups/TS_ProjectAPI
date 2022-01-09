@@ -68,7 +68,7 @@ GET /GetOwnerByCompanyId
 
 ```javascript
 Body: {
-  companyId: CompanyID;
+  companyId: CompanyID
 }
 ```
 
@@ -80,7 +80,7 @@ GET /GetOwnersByCompanyId
 
 ```javascript
 Body: {
-  companyId: CompanyID;
+  companyId: CompanyID
 }
 ```
 
@@ -143,7 +143,7 @@ PUT /RemoveCompany
 
 ```javascript
 Body: {
-  companyId: CompanyID;
+  companyId: CompanyID
 }
 ```
 
