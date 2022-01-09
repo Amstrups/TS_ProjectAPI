@@ -16,7 +16,7 @@ docker pull node
 
 ## Build
 
-**The following docker-commands are all required to be run in the root directory of the application**
+**The following docker-commands are all required to be run in the root directory of the application.**
 
 Before the application can run, you will have to build the image by running the following command, replacing "your-preferred-image-name":
 
@@ -27,7 +27,7 @@ docker build -t your-preferred-image-name .
 or, if no personalized image-name wanted, run:
 
 ```bash
-docker-compose build
+docker-compose build .
 ```
 
 This command will hijack the name of the directory, and use this in the naming process.
@@ -47,3 +47,5 @@ To shutdown the application, run the following command:
 ```bash
 docker-compose down
 ```
+
+## API-Documentation
