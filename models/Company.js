@@ -1,6 +1,4 @@
 const mongoose = require('mongoose')
-const Owner = require('../models/Owner')
-
 
 const CompanySchema = mongoose.Schema({
     name: {
