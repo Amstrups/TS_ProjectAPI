@@ -85,12 +85,14 @@ POST /CreateCompany
 ```
 
 ```javascript
-Body: {name: CompanyName,
-country: CompanyCountry,
-owners: [{
-name: OwnerName,
-socialNumber: OwnerSocialSecurityNumber
-}]}
+Body: {
+    name: CompanyName,
+    country: CompanyCountry,
+    owners: [{
+        name: OwnerName,
+        socialNumber: OwnerSocialSecurityNumber
+    }]
+}
 ```
 
 ## Putters
